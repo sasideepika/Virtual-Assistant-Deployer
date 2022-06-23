@@ -5,7 +5,7 @@ function ReplaceInFile {
 }
 
 # clone the latest sample
-$workspaceDir = (Get-ChildItem Env:PWD).Value
+#$workspaceDir = (Get-ChildItem Env:PWD).Value
 
 git clone https://github.com/microsoft/botframework-solutions.git $workspaceDir/va_src
 
@@ -28,4 +28,4 @@ $publishScript = "$workspaceDir/va/VirtualAssistantSample/Deployment/Scripts/pub
 ReplaceInFile $publishScript 'bin\\Release\\netcoreapp3.0' 'bin\\release\\netcoreapp3.0'
 
 # prevent the telemetry prompt the first time bf cli is used
-"Y" | bf
+#"Y" | bf
